@@ -83,7 +83,7 @@ For easy drag & drop handling of LCS script files, a desktop shortcut can be cre
 ![Desktop shortcut](https://github.com/elpatron68/lc-lcs-upload/raw/master/screenshots/LC-LCS-Upload_SSH.exe_shortcut.png "Desktop shortcut settings")
 
 
-[![Video screencast](https://www.youtube.com/watch?v=h_yv8S8wOhI)](https://github.com/elpatron68/lc-lcs-upload/raw/master/screenshots/YouTube-Preview.png)
+[![Video screencast](https://gifs.com/gif/lc-lcs-upload-3231Np)](https://www.youtube.com/watch?v=h_yv8S8wOhI)
 
 ## License
 
