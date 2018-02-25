@@ -93,6 +93,14 @@ For easy drag & drop handling of LCS script files, a desktop shortcut can be cre
 | Username       | 1             | 2           | 3           | na          |
 | Password       | 1             | 2           | 3           | 4           |
 
+### Batch run
+
+To process many files with a batch file, create your scripts and apply at least address and passwords into them. Create a Windows command file like this:
+
+```
+@echo off
+for /F "tokens=*" %%A in ('type "*.lcs"') do LC-LCS-Upload_SSH.exe -b backup -i %%A
+```
 
 ## License
 
