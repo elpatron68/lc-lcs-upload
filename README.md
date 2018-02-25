@@ -89,6 +89,9 @@ You may set default values for router address, username and password as Windows 
 
 Tip: Existing environment variables will be overwritten from settings from the script file, which are overwritten from command line arguments. See [Priority of given settings](README.md#Priority-of-settings).
 
+See [`demo.cmd`](https://github.com/elpatron68/lc-lcs-upload/blob/master/LC-LCS-Upload_SSH/demo.cmd) for an example of taking use of environment variables.
+
+
 ### Desktop shortcut
 
 For easy drag & drop handling of LCS script files, a desktop shortcut can be created. If should at least have the `-i` argument for the LCS file to be processed. You may probable add `-w` to see the output. note, that `-i` has to be the last command line switch as the file name will be added at the end.
@@ -112,8 +115,10 @@ To process many files with a batch file, create your scripts and apply at least 
 
 ```
 @echo off
-for /F "tokens=*" %%A in ('type "*.lcs"') do LC-LCS-Upload_SSH.exe -b backup -i %%A
+for /r %%A in (*.lcs) do LC-LCS-Upload_SSH.exe -i %%A
 ```
+
+See [`demo.cmd`](https://github.com/elpatron68/lc-lcs-upload/blob/master/LC-LCS-Upload_SSH/demo.cmd) for an example.
 
 ## License
 
