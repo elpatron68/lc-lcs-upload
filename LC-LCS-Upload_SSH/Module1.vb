@@ -166,6 +166,11 @@ Module Module1
         Backuprouter = False
     End Function
 
+    ''' <summary>
+    ''' Get settings from LCS file
+    ''' </summary>
+    ''' <param name="filename"></param>
+    ''' <returns></returns>
     Private Function GetDataFromFile(ByVal filename As String) As Routerinfo
         Dim result = New Routerinfo
         Dim line As String = String.Empty
