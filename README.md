@@ -75,6 +75,19 @@ Options:
     --backup [-b]     : Download LCF backup in <path> before uploading the script
     --help [-h]       : Show help
 ```
+### Environment variables
+
+You may set default values for router address, username and password as Windows environment variables. This can be done as `SET` command in a batch file or globally in the system settings.
+
+*LC-LCS-Upload* supports the following environment variables:
+
+| Name | Example |
+| ---- | ------- |
+| `LC-LCS-ADDRESS` | `SET LC-LCS-ADDRESS=mylancom.foo.bar` |
+| `LC-LCS-USERNAME` | `SET LC-LCS-USERNAME=admin` |
+| `LC-LCS-PASSWORD` | `SET LC-LCS-PASSWORD=pA55w0Rd` |
+
+Tipp: Existing environment variables will be overwritten from settings from the script file, which are overwritten from command line arguments. See [Priority of given settings](README.md#Priority-of-given-settings).
 
 ### Desktop shortcut
 
