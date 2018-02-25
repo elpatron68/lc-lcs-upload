@@ -1,4 +1,7 @@
 ﻿@echo off
+rem Demo batch file for mass processing
+rem ===================================
+rem
 rem This file has to be executed from the directory where the script files are located.
 rem If 'LC-LCS-Upload_SSH.exe' is located in another directory, the path has to be added.
 rem
