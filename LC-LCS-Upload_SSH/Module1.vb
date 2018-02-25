@@ -120,7 +120,7 @@ Module Module1
         End If
 
         Dim result = Lcssh.Uploadlcs(router.Address, router.Username, router.Password, filename)
-        If result <> String.Empty Then
+        If result <> "Transfer successful" Then
             logger.Warn(result)
         Else
             logger.Info($"Script '{filename}' successfully uploaded to '{router.Address}'")
