@@ -1,6 +1,25 @@
 # LC-LCS-Upload (SSH)
 Windows command line tool to upload LANCOM script files (*.lcs) to a LANCOM router device
 
+<!-- TOC -->
+
+- [LC-LCS-Upload (SSH)](#lc-lcs-upload-ssh)
+    - [Features](#features)
+    - [Installation](#installation)
+        - [Requirements](#requirements)
+        - [Download and install](#download-and-install)
+    - [Preparing script files](#preparing-script-files)
+        - [Example script file](#example-script-file)
+    - [Usage](#usage)
+        - [Command line usage](#command-line-usage)
+        - [Environment variables](#environment-variables)
+        - [Desktop shortcut](#desktop-shortcut)
+        - [Priority of settings](#priority-of-settings)
+        - [Batch run](#batch-run)
+    - [License](#license)
+
+<!-- /TOC -->
+
 ## Features
 - Upload a LCS script file to a LANCOM router device
 - Drag and drop via desktop shortcut
@@ -11,6 +30,19 @@ Windows command line tool to upload LANCOM script files (*.lcs) to a LANCOM rout
 - Downloads LCF router configuration (*.lcf) as backup before uploading a script
 
 ## Installation
+
+### Requirements
+
+*LC-LCS-Upload* requires Microsoft Windows Vista SP2 (32 or 64 bit) or newer and Microsofts .NET Framework 4.6.1 (included in Windows 10 Anniversary Update and newer versions of Microsoft Windows).
+
+Download links:
+
+- [.NET Framework 4.6.1 web installer](http://go.microsoft.com/fwlink/?LinkId=780597)
+- [.NET Framework 4.6.1 offline installer](http://go.microsoft.com/fwlink/?LinkId=780601)
+
+[Detailed sytem requirements for Microsoft .NET](https://docs.microsoft.com/en-us/dotnet/framework/get-started/system-requirements) from Microsoft.
+
+### Download and install
 
 Download the latest ZIP archive from the [releases page](https://github.com/elpatron68/lc-lcs-upload/releases) and unzip it to a folder of you choice. The directory must be writeable, so don't use `"C:\Program Files (x86)"` or similar.
 
