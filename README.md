@@ -14,6 +14,8 @@ Windows command line tool to upload LANCOM script files (*.lcs) to a LANCOM rout
 
 Download the latest ZIP archive from the [releases page](https://github.com/elpatron68/lc-lcs-upload/releases) and unzip it to a folder of you choice. The directory must be writeable, so don't use `"C:\Program Files (x86)"` or similar.
 
+Optional: For easy batch usage, add the installation directory to your `PATH` environment variable.
+
 ## Preparing script files
 *LC-LCS-Upload* supports defining some device specific settings as comment lines in the LCS file. Using this enables you to upload scripts without any user interaction onto many devices.
 
