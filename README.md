@@ -140,6 +140,7 @@ For easy drag & drop handling of LCS script files, a desktop shortcut can be cre
 | Setting placement | < overrides | < overrides | < overrides         |
 | ----------------- | ------------| ----------- | ------------------- |
 | Environment vars  | Scriptfile  | Commandline | Runtime user input  |
+
 ### Batch run
 
 To process many files with a batch file, create your scripts and apply at least address and passwords into them. Create a Windows command file like this:
