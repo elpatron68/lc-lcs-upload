@@ -78,7 +78,7 @@ Options:
 
 ### Desktop shortcut
 
-For easy drag & drop handling of LCS script files, a desktop shortcut can be created. If should at least have the `-i` argument for the LCS file to be processed:
+For easy drag & drop handling of LCS script files, a desktop shortcut can be created. If should at least have the `-i` argument for the LCS file to be processed. You may probable add `-w` to see the output. note, that `-i` has to be the last command line switch as the file name will be added at the end.
 
 ![Desktop shortcut](https://github.com/elpatron68/lc-lcs-upload/raw/master/screenshots/LC-LCS-Upload_SSH.exe_shortcut.png "Desktop shortcut settings")
 

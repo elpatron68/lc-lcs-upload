@@ -1,8 +1,8 @@
 ﻿Public Class Routerinfo
-    Private rtAddress As String
-    Private rtUser As String
-    Private rtPassword As String
-    Private rtBackup As String
+    Private _rtAddress As String
+    Private _rtUser As String
+    Private _rtPassword As String
+    Private _rtBackup As String
 
     Public Sub New()
         Address = String.Empty
@@ -13,37 +13,37 @@
 
     Public Property Address As String
         Get
-            Return rtAddress
+            Return _rtAddress
         End Get
         Set(value As String)
-            rtAddress = value
+            _rtAddress = value
         End Set
     End Property
 
     Public Property Username As String
         Get
-            Return rtUser
+            Return _rtUser
         End Get
         Set(value As String)
-            rtUser = value
+            _rtUser = value
         End Set
     End Property
 
     Public Property Password As String
         Get
-            Return rtPassword
+            Return _rtPassword
         End Get
         Set(value As String)
-            rtPassword = value
+            _rtPassword = value
         End Set
     End Property
 
     Public Property Backup As String
         Get
-            Return rtBackup
+            Return _rtBackup
         End Get
         Set(value As String)
-            rtBackup = value
+            _rtBackup = value
         End Set
     End Property
 

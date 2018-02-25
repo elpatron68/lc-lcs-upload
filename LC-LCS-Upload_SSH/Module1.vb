@@ -33,29 +33,29 @@ Module Module1
             Try
                 routerfromcommandline.Address = parser.NamedArguments("address")
             Catch ex As KeyNotFoundException
-                logger.Info("No router adress given as command line argument")
+                logger.Debug("No router adress given as command line argument")
             End Try
 
             Try
                 routerfromcommandline.Username = parser.NamedArguments("username")
             Catch ex As KeyNotFoundException
-                logger.Info("No username  given as command line argument")
+                logger.Debug("No username  given as command line argument")
             End Try
             Try
                 routerfromcommandline.Password = parser.NamedArguments("password")
             Catch ex As KeyNotFoundException
-                logger.Info("No password given as command line argument")
+                logger.Debug("No password given as command line argument")
             End Try
             Try
                 filename = parser.NamedArguments("input")
             Catch ex As KeyNotFoundException
-                logger.Error("No filename given as command line argument")
+                logger.Debug("No filename given as command line argument")
                 Exit Sub
             End Try
             Try
                 routerfromcommandline.Backup = parser.NamedArguments("backup")
             Catch ex As KeyNotFoundException
-                logger.Info("No backup directory given as command line argument")
+                logger.Debug("No backup directory given as command line argument")
             End Try
             If parser.NamedArguments("wait") = "1" Then
                 waitforuser = True
@@ -72,44 +72,48 @@ Module Module1
 
         If routerfromcommandline.Address <> String.Empty Then
             router.Address = routerfromcommandline.Address
-            logger.Info($"Using address from commandline: {router.Address}")
+            logger.Debug($"Using address from commandline: {router.Address}")
         ElseIf routerfromfile.Address <> String.Empty Then
             router.Address = routerfromfile.Address
-            logger.Info($"Using address from file: {router.Address}")
+            logger.Debug($"Using address from file: {router.Address}")
         ElseIf routerfromenvironmet.Address <> String.Empty Then
             router.Address = routerfromenvironmet.Address
         Else
             Console.WriteLine("Enter router address (IP or domain name): ")
             router.Address = Console.ReadLine()
-            logger.Info($"Using address from user input: {router.Address}")
+            logger.Debug($"Using address from user input: {router.Address}")
         End If
 
         If routerfromcommandline.Username <> String.Empty Then
             router.Username = routerfromcommandline.Username
-            logger.Info($"Using username from commandline: {router.Username}")
+            logger.Debug($"Using username from commandline: {router.Username}")
         ElseIf routerfromfile.Username <> String.Empty Then
             router.Username = routerfromfile.Username
-            logger.Info($"Using username from file: {router.Username}")
+            logger.Debug($"Using username from file: {router.Username}")
         ElseIf routerfromenvironmet.Username <> String.Empty Then
             router.Username = routerfromenvironmet.Username
         Else
             router.Username = "root"
-            logger.Info($"Using default username (root): {router.Username}")
+            logger.Debug($"Using default username (root): {router.Username}")
         End If
 
         If routerfromcommandline.Password <> String.Empty Then
             router.Password = routerfromcommandline.Password
-            logger.Info($"Using password from commandline: {router.Password}")
+            logger.Debug($"Using password from commandline: {router.Password}")
         ElseIf routerfromfile.Password <> String.Empty Then
             router.Password = routerfromfile.Password
-            logger.Info($"Using password from file: {router.Password}")
+            logger.Debug($"Using password from file: {router.Password}")
         ElseIf routerfromenvironmet.Password <> String.Empty Then
             router.Password = routerfromenvironmet.Password
         Else
             Console.WriteLine("Enter password: ")
             router.Password = Console.ReadLine()
-            logger.Info($"Using password from user input: {router.Password}")
+            logger.Debug($"Using password from user input: {router.Password}")
         End If
+
+        Dim routerdump = ObjectDumper.Dump(router)
+        logger.Info("Used device settings (enable debug loglevel for details):")
+        logger.Info(routerdump)
 
         ' Create backup
         If routerfromcommandline.Backup <> String.Empty Then
