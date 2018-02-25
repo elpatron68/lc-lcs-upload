@@ -1,11 +1,11 @@
-﻿# routeraddress:192.168.178.1
+﻿# routeraddress:192.168.177.2
 # username:root
 # password:123654()Ab
 #
 lang English
 flash No
 
-set /Setup/SNMP/Administrator "Operator from hell"
+set /Setup/SNMP/Administrator "Angel operator from heaven"
 
 flash Yes
 exit
