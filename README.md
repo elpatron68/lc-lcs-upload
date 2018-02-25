@@ -25,9 +25,9 @@ Windows command line tool to upload LANCOM script files (*.lcs) to a LANCOM rout
 - Drag and drop via desktop shortcut
 - Define parameters like router address, username, password as comments in the script file or as environment variables.
     - Usage without any user interaction
-    - Batch jobs for many routers
-- Full command line interface
-- Downloads LCF router configuration (*.lcf) as backup before uploading a script
+    - Batch jobs for processing many routers
+- Full featured command line interface
+- Optional: Download LCF router configuration (*.lcf) as backup before uploading a script
 
 ## Installation
 
@@ -40,11 +40,11 @@ Download links:
 - [.NET Framework 4.6.1 web installer](http://go.microsoft.com/fwlink/?LinkId=780597)
 - [.NET Framework 4.6.1 offline installer](http://go.microsoft.com/fwlink/?LinkId=780601)
 
-[Detailed sytem requirements for Microsoft .NET](https://docs.microsoft.com/en-us/dotnet/framework/get-started/system-requirements) from Microsoft.
+[Detailed sytem requirements for Microsoft .NET](https://docs.microsoft.com/en-us/dotnet/framework/get-started/system-requirements) provided by Microsoft.
 
 ### Download and install
 
-Download the latest ZIP archive from the [releases page](https://github.com/elpatron68/lc-lcs-upload/releases) and unzip it to a folder of you choice. The directory must be writeable, so don't use `"C:\Program Files (x86)"` or similar.
+Download the latest ZIP archive from the [releases page](https://github.com/elpatron68/lc-lcs-upload/releases) and unzip it to a folder of you choice. The directory must be writable, so don't use `"C:\Program Files (x86)"` or similar.
 
 Optional: For easy batch usage, add the installation directory to your `PATH` environment variable.
 
