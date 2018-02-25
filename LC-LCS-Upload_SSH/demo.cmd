@@ -8,6 +8,11 @@ rem
 rem Otherwise, the directory of LC-LCS-Upload_SSH could be added to the global PATH
 rem environment variable.
 rem
+rem Setting defaults with environment variables
+rem ===========================================
+rem SET LC-LCS-ADDRESS=mylancom.foo.bar
+rem SET LC-LCS-USERNAME=admin
+rem SET LC-LCS-PASSWORD=pA55w0Rd
 rem
 rem Example usage (comment out one of them)
 rem =============

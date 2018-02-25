@@ -81,13 +81,13 @@ You may set default values for router address, username and password as Windows 
 
 *LC-LCS-Upload* supports the following environment variables:
 
-| Name | Example |
-| ---- | ------- |
-| `LC-LCS-ADDRESS` | `SET LC-LCS-ADDRESS=mylancom.foo.bar` |
-| `LC-LCS-USERNAME` | `SET LC-LCS-USERNAME=admin` |
-| `LC-LCS-PASSWORD` | `SET LC-LCS-PASSWORD=pA55w0Rd` |
+| Name              | Example                               |
+| ----------------- | ------------------------------------- |
+| `LC-LCS-ADDRESS`  | `SET LC-LCS-ADDRESS=mylancom.foo.bar` |
+| `LC-LCS-USERNAME` | `SET LC-LCS-USERNAME=admin`           |
+| `LC-LCS-PASSWORD` | `SET LC-LCS-PASSWORD=pA55w0Rd`        |
 
-Tipp: Existing environment variables will be overwritten from settings from the script file, which are overwritten from command line arguments. See [Priority of given settings](README.md#Priority-of-given-settings).
+Tip: Existing environment variables will be overwritten from settings from the script file, which are overwritten from command line arguments. See [Priority of given settings](README.md#Priority-of-settings).
 
 ### Desktop shortcut
 
@@ -98,7 +98,7 @@ For easy drag & drop handling of LCS script files, a desktop shortcut can be cre
 
 [![Video screencast](https://j.gifs.com/3231Np.gif)](https://www.youtube.com/watch?v=h_yv8S8wOhI)
 
-### Priority of given settings
+### Priority of settings
 
 | Setting        | Environment   | Scriptfile  | Commandline | User input  |
 | -------------- | :-----------: | :---------: | :---------: | ----------- |
