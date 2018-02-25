@@ -112,10 +112,7 @@ Module Module1
         End If
 
         logger.Info("Effective device settings (see log file for details):")
-        logger.Info($"Address:     {router.Address}")
-        logger.Info($"Username:    {router.Username}")
-        logger.Info($"Password:    {router.Password}")
-        logger.Info($"Backup path: {router.Backup}")
+        logger.Info(Routerinfo.Dump(router))
 
         ' Create backup
         If routerfromcommandline.Backup <> String.Empty Then

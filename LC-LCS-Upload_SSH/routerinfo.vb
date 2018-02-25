@@ -47,4 +47,11 @@
         End Set
     End Property
 
+    Public Shared Function Dump(ByVal device As Routerinfo) As String
+        Dump =
+        ($"Address:     {device.Address}{Environment.NewLine}") +
+        ($"Username:    {device.Username}{Environment.NewLine}") +
+        ($"Password:    {device.Password}{Environment.NewLine}") +
+        ($"Backup path: {device.Backup}")
+    End Function
 End Class
