@@ -1,18 +1,22 @@
 ﻿Imports System.IO
 Imports NLog
 Imports BurnSystems.CommandLine
+Imports LC_LCS_Upload_SSH
 
 Module Module1
     Public logger As Logger = LogManager.GetCurrentClassLogger()
 
     Sub Main()
         Dim routerfromcommandline As Routerinfo = New Routerinfo
+        Dim routerfromenvironmet As Routerinfo = New Routerinfo
         Dim filename = String.Empty
         Dim waitforuser As Boolean = False
 
+        GetEnvironment(routerfromenvironmet)
+
         Console.WriteLine("LC-LCS-Upload v1.0")
         Console.WriteLine("(c) 2018 m.busche@gmail.com")
-        Console.WriteLine("Free Open Source Software, see License.txt")
+        Console.WriteLine("Free Open Source Software, see License.md")
         Console.WriteLine()
 
         Dim parser = New Parser(My.Application.CommandLineArgs.ToArray) _
@@ -105,7 +109,7 @@ Module Module1
         If routerfromcommandline.Backup <> String.Empty Then
             router.Backup = routerfromcommandline.Backup
             If Backuprouter(router) = False Then
-                ' TODO: Exit if secure backup
+                ' TODO: Exit if secure backup wanted
             End If
         End If
 
@@ -116,11 +120,34 @@ Module Module1
             logger.Info($"Script '{filename}' successfully uploaded to '{router.Address}'")
         End If
 
-
         If waitforuser = True Then
             Console.WriteLine("Hit any key to exit.")
             Console.ReadKey()
         End If
+    End Sub
+
+    Private Sub GetEnvironment(ByRef routerfromenvironmet As Routerinfo)
+        Try
+            logger.Debug("Getting router address from environment variable")
+            routerfromenvironmet.Address = Environment.GetEnvironmentVariable("lc-lcs-address")
+            logger.Info($"Router address from environment: {routerfromenvironmet.Address}")
+        Catch ex As ArgumentNullException
+            logger.Debug("Address not set")
+        End Try
+        Try
+            logger.Debug("Getting username from environment variable")
+            routerfromenvironmet.Username = Environment.GetEnvironmentVariable("lc-lcs-username")
+            logger.Info($"Username from environment: {routerfromenvironmet.Username}")
+        Catch ex As ArgumentNullException
+            logger.Debug("Username not set")
+        End Try
+        Try
+            logger.Debug("Getting password from environment variable")
+            routerfromenvironmet.Password = Environment.GetEnvironmentVariable("lc-lcs-password")
+            logger.Info($"Password from environment: {routerfromenvironmet.Password}")
+        Catch ex As ArgumentNullException
+            logger.Debug("Password not set")
+        End Try
     End Sub
 
     ''' <summary>

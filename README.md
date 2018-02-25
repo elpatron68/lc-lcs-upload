@@ -58,7 +58,7 @@ exit
 ```
 LC-LCS-Upload v1.0
 (c) 2018 m.busche@gmail.com
-Free Open Source Software, see License.txt
+Free Open Source Software, see License.md
 
 LC-LCS-Upload_SSH.exe {options}
 Version: 1.0.0.0
@@ -84,6 +84,8 @@ For easy drag & drop handling of LCS script files, a desktop shortcut can be cre
 
 
 [![Video screencast](https://j.gifs.com/3231Np.gif)](https://www.youtube.com/watch?v=h_yv8S8wOhI)
+
+### Priority of given settings
 
 ## License
 
