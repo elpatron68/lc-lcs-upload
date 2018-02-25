@@ -225,7 +225,7 @@ Module Module1
                 If line.Contains("username:") Then
                     Try
                         line = line.Split(CChar(":"))(1).Trim
-                        logger.Info($"Username from file: {line}")
+                        logger.Debug($"Username from file: {line}")
                         result.Username = line
                     Catch ex As Exception
                         logger.Warn($"No username found in file.")
@@ -234,7 +234,7 @@ Module Module1
                 If line.Contains("password:") Then
                     Try
                         line = line.Split(CChar(":"))(1).Trim
-                        logger.Info($"Password from file: {line}")
+                        logger.Debug($"Password from file: {line}")
                         result.Password = line
                     Catch ex As Exception
                         logger.Warn($"No passwort found in file.")
