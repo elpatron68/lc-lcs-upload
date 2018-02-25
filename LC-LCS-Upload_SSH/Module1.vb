@@ -111,7 +111,7 @@ Module Module1
             logger.Debug($"Using password from user input: {router.Password}")
         End If
 
-        logger.Info("Effective device settings (enable debug loglevel for details):")
+        logger.Info("Effective device settings (see log file for details):")
         logger.Info($"Address:     {router.Address}")
         logger.Info($"Username:    {router.Username}")
         logger.Info($"Password:    {router.Password}")
