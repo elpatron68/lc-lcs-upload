@@ -1,7 +1,6 @@
 ﻿Imports System.IO
 Imports NLog
 Imports BurnSystems.CommandLine
-Imports LC_LCS_Upload_SSH
 
 Module Module1
     Public logger As Logger = LogManager.GetCurrentClassLogger()
