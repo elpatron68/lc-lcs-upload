@@ -26,8 +26,6 @@ Supported settings:
 - `username:<specific username>` (defaults to `root`)
 - `password:<password>`
 
-Don't use blanks after the colon!
-
 ### Example script file
 
 ```
