@@ -137,9 +137,9 @@ For easy drag & drop handling of LCS script files, a desktop shortcut can be cre
 
 ### Priority of settings
 
-|                   |                  | < overrides | < overrides | < overrides         |
-| ----------------- | ---------------- | ----------- | ----------- | ------------------- |
-| Setting placement | Environment vars | Scriptfile  | Commandline | Runtime user input  |
+|                       |                  | < overrides | < overrides | < overrides         |
+| --------------------- | ---------------- | ----------- | ----------- | ------------------- |
+| **Setting placement** | Environment vars | Scriptfile  | Commandline | Runtime user input  |
 
 ### Batch run
 
