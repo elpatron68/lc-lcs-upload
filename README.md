@@ -42,6 +42,8 @@ Download links:
 
 [Detailed sytem requirements for Microsoft .NET](https://docs.microsoft.com/en-us/dotnet/framework/get-started/system-requirements) provided by Microsoft.
 
+*The manufacturer`s 'LANtools' or a Ssh client like 'Putty' don't need to be installed.*
+
 ### Download and install
 
 Download the latest ZIP archive from the [releases page](https://github.com/elpatron68/lc-lcs-upload/releases) and unzip it to a folder of you choice. The directory must be writable, so don't use `"C:\Program Files (x86)"` or similar.
