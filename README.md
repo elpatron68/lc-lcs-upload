@@ -23,7 +23,7 @@ Windows command line tool to upload LANCOM script files (*.lcs) to a LANCOM rout
 ## Features
 - Upload a LCS script file to a LANCOM router device
 - Drag and drop via desktop shortcut
-- Define parameters like router adress, username, passwort as comments in the script file or as environment variables.
+- Define parameters like router address, username, passwort as comments in the script file or as environment variables.
     - Usage without any user interaction
     - Batch jobs for many routers
 - Full command line interface
@@ -54,7 +54,7 @@ Optional: For easy batch usage, add the installation directory to your `PATH` en
 Setting lines have to start with `#` as LANCOM comment line (see example).
 
 Supported settings:
-- `routeraddress:<IP adress or domain name>`
+- `routeraddress:<IP address or domain name>`
 - `username:<specific username>` (defaults to `root`)
 - `password:<password>`
 

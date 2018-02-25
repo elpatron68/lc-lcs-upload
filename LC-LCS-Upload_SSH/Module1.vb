@@ -33,7 +33,7 @@ Module Module1
             Try
                 routerfromcommandline.Address = parser.NamedArguments("address")
             Catch ex As KeyNotFoundException
-                logger.Debug("No router adress given as command line argument")
+                logger.Debug("No router address given as command line argument")
             End Try
 
             Try
@@ -216,7 +216,7 @@ Module Module1
                 If line.Contains("routeraddress:") Then
                     Try
                         line = line.Split(CChar(":"))(1).Trim
-                        logger.Debug($"Router adress from file: {line}")
+                        logger.Debug($"Router address from file: {line}")
                         result.Address = line
                     Catch ex As Exception
                         logger.Warn($"No router address found in file.")
