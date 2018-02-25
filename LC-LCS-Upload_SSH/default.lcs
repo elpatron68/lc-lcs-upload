@@ -1,0 +1,11 @@
+﻿# routeraddress:192.168.178.1
+# username:root
+# password:123654()Ab
+#
+lang English
+flash No
+
+set /Setup/SNMP/Administrator "Operator from hell"
+
+flash Yes
+exit
