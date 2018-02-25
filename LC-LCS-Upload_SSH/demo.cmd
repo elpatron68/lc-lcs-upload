@@ -21,3 +21,4 @@ for /r %%A in (*.lcs) do LC-LCS-Upload_SSH.exe -i %%A
 rem
 rem Apply scripts, create a backup of each device
 for /r %%A in (*.lcs) do LC-LCS-Upload_SSH.exe -b backup -i %%A
+
