@@ -104,7 +104,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ObjectDumper.vb" />
     <Compile Include="routerinfo.vb" />
   </ItemGroup>
   <ItemGroup>

@@ -111,9 +111,11 @@ Module Module1
             logger.Debug($"Using password from user input: {router.Password}")
         End If
 
-        Dim routerdump = ObjectDumper.Dump(router)
-        logger.Info("Used device settings (enable debug loglevel for details):")
-        logger.Info(routerdump)
+        logger.Info("Effective device settings (enable debug loglevel for details):")
+        logger.Info($"Address:     {router.Address}")
+        logger.Info($"Username:    {router.Username}")
+        logger.Info($"Password:    {router.Password}")
+        logger.Info($"Backup path: {router.Backup}")
 
         ' Create backup
         If routerfromcommandline.Backup <> String.Empty Then
