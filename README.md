@@ -137,6 +137,9 @@ For easy drag & drop handling of LCS script files, a desktop shortcut can be cre
 
 [![Video screencast](https://j.gifs.com/3231Np.gif)](https://www.youtube.com/watch?v=h_yv8S8wOhI)
 
+Click on the image (or [here](https://www.youtube.com/watch?v=h_yv8S8wOhI)) to watch the full video on Youtube.
+
+
 ### Priority of settings
 
 |                       |                  | < overrides | < overrides | < overrides         |
