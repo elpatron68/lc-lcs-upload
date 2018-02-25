@@ -62,10 +62,13 @@ Public Class Lcssh
             End If
         End Try
 
-        If sShelloutput.ToLower.Contains("wrong") Or sShelloutput.ToLower.Contains("error") Then
-            result = "Router reports error"
-        End If
+        'If sShelloutput.ToLower.Contains("wrong") Or sShelloutput.ToLower.Contains("error") Then
+        '    result = "Router reports error"
+        'End If
 
+        If sShelloutput.Contains("Goodbye") Then
+            result = "Transfer successful"
+        End If
         Return result
     End Function
 
