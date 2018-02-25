@@ -87,11 +87,18 @@ For easy drag & drop handling of LCS script files, a desktop shortcut can be cre
 
 ### Priority of given settings
 
+| Setting        | Environment   | Scriptfile  | Commandline | User input  |
+| -------------- | :-----------: | :---------: | :---------: | ----------- |
+| Address        | 1             | 2           | 3           | 4           |
+| Username       | 1             | 2           | 3           | na          |
+| Password       | 1             | 2           | 3           | 4           |
+
+
 ## License
 
-See [LICENSE.md](LICENSE.md)
+*LC-LCS-Upload* is free open Source software (OSS), licensed under the MIT license. See [LICENSE.md](https://github.com/elpatron68/lc-lcs-upload/raw/master/LICENSE.md).
 
-You have to accept the licenses of these third party components:
+By using *LC-LCS-Upload* you have to accept the licenses of these third party components:
 
 - [NLog](https://raw.githubusercontent.com/NLog/NLog/master/LICENSE.txt)
 - [BurnSystems.CommandLine](https://opensource.org/licenses/MIT)

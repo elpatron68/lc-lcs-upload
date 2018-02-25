@@ -76,8 +76,10 @@ Module Module1
         ElseIf routerfromfile.Address <> String.Empty Then
             router.Address = routerfromfile.Address
             logger.Info($"Using address from file: {router.Address}")
+        ElseIf routerfromenvironmet.Address <> String.Empty Then
+            router.Address = routerfromenvironmet.Address
         Else
-            Console.WriteLine("Router address (IP or domain name)? ")
+            Console.WriteLine("Enter router address (IP or domain name): ")
             router.Address = Console.ReadLine()
             logger.Info($"Using address from user input: {router.Address}")
         End If
@@ -88,6 +90,8 @@ Module Module1
         ElseIf routerfromfile.Username <> String.Empty Then
             router.Username = routerfromfile.Username
             logger.Info($"Using username from file: {router.Username}")
+        ElseIf routerfromenvironmet.Username <> String.Empty Then
+            router.Username = routerfromenvironmet.Username
         Else
             router.Username = "root"
             logger.Info($"Using default username (root): {router.Username}")
@@ -99,8 +103,10 @@ Module Module1
         ElseIf routerfromfile.Password <> String.Empty Then
             router.Password = routerfromfile.Password
             logger.Info($"Using password from file: {router.Password}")
+        ElseIf routerfromenvironmet.Password <> String.Empty Then
+            router.Password = routerfromenvironmet.Password
         Else
-            Console.WriteLine("Password? ")
+            Console.WriteLine("Enter password: ")
             router.Password = Console.ReadLine()
             logger.Info($"Using password from user input: {router.Password}")
         End If
@@ -128,21 +134,21 @@ Module Module1
 
     Private Sub GetEnvironment(ByRef routerfromenvironmet As Routerinfo)
         Try
-            logger.Debug("Getting router address from environment variable")
+            logger.Debug("Reading router address from environment variable")
             routerfromenvironmet.Address = Environment.GetEnvironmentVariable("lc-lcs-address")
             logger.Info($"Router address from environment: {routerfromenvironmet.Address}")
         Catch ex As ArgumentNullException
             logger.Debug("Address not set")
         End Try
         Try
-            logger.Debug("Getting username from environment variable")
+            logger.Debug("Reading username from environment variable")
             routerfromenvironmet.Username = Environment.GetEnvironmentVariable("lc-lcs-username")
             logger.Info($"Username from environment: {routerfromenvironmet.Username}")
         Catch ex As ArgumentNullException
             logger.Debug("Username not set")
         End Try
         Try
-            logger.Debug("Getting password from environment variable")
+            logger.Debug("Reading password from environment variable")
             routerfromenvironmet.Password = Environment.GetEnvironmentVariable("lc-lcs-password")
             logger.Info($"Password from environment: {routerfromenvironmet.Password}")
         Catch ex As ArgumentNullException
