@@ -159,7 +159,7 @@ See [`demo.cmd`](https://github.com/elpatron68/lc-lcs-upload/blob/master/LC-LCS-
 
 ## License
 
-*LC-LCS-Upload* is free open Source software (OSS), licensed under the MIT license. See [LICENSE.md](https://github.com/elpatron68/lc-lcs-upload/raw/master/LICENSE.md).
+*LC-LCS-Upload* is free Open Source Software (OSS), licensed under the MIT license. See [LICENSE.md](https://github.com/elpatron68/lc-lcs-upload/raw/master/LICENSE.md).
 
 By using *LC-LCS-Upload* you have to accept the licenses of these third party components:
 
